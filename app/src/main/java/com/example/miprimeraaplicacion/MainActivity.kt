@@ -16,6 +16,9 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
+        // val variable in-mutable
+        // var variable mutable
+
         val edUsername:EditText = findViewById(R.id.ed_username)
         val edPassw:EditText = findViewById(R.id.ed_passwd)
         val btnLogin:Button = findViewById(R.id.btn_login)
@@ -23,13 +26,6 @@ class MainActivity : AppCompatActivity() {
 
         var defUsername = "uAdmin"
         var defPasswd = "admin123"
-
-
-
-
-
-
-
 
         /**
          * Botón Login

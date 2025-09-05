@@ -1,5 +1,6 @@
 package com.example.miprimeraaplicacion
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -21,6 +22,10 @@ class MainActivity2 : AppCompatActivity() {
 
         val btnCalculadora:Button = findViewById(R.id.btn_calculadora)
 
+        btnCalculadora.setOnClickListener {
+            val nuevaVentana = Intent(this, MainActivity3::class.java)
+            startActivity(nuevaVentana)
+        }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
