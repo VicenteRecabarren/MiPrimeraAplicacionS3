@@ -21,11 +21,19 @@ class MainActivity2 : AppCompatActivity() {
         txUsuario.text = recibirUsernameS.toString()
 
         val btnCalculadora:Button = findViewById(R.id.btn_calculadora)
+        val btnMenu:Button = findViewById(R.id.btn_menu)
 
         btnCalculadora.setOnClickListener {
             val nuevaVentana = Intent(this, MainActivity3::class.java)
             startActivity(nuevaVentana)
         }
+
+        btnMenu.setOnClickListener{
+            val nuevaVentanaMenu = Intent(this, MainActivity4::class.java)
+            startActivity(nuevaVentanaMenu)
+        }
+
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
